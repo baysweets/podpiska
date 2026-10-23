@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подписка на рассылку — Бухта Сладостей</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,sans-serif;background:#f5efe6;color:#2b1d0e;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px}
+  .card{background:#fff;width:100%;max-width:440px;padding:24px 20px;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.12)}
+  .brand{margin:0 0 4px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#e8590c;font-weight:bold}
+  h1{margin:0 0 10px;font-size:22px;line-height:1.25;color:#2b1d0e}
+  p{margin:0 0 18px;font-size:16px;line-height:1.45}
+  label{display:block;font-size:14px;margin:12px 0 4px}
+  input[type=text]{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+  input[type=text]:focus{outline:2px solid #e8590c;border-color:#e8590c}
+  .agree{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.4;color:#666;margin-top:16px}
+  .agree input{margin-top:2px;flex:none;width:18px;height:18px}
+  input[type=submit]{width:100%;margin-top:18px;padding:14px;border:0;border-radius:8px;background:#e8590c;color:#fff;font-size:17px;font-weight:bold;cursor:pointer}
+  input[type=submit]:hover{background:#c94a07}
+
+  /* Планшет */
+  @media (min-width:600px){
+    .card{max-width:520px;padding:34px 32px}
+    h1{font-size:26px}
+    p{font-size:17px}
+  }
+  /* ПК */
+  @media (min-width:1024px){
+    body{padding:40px}
+    .card{max-width:560px;padding:44px 44px}
+    h1{font-size:30px}
+    p{font-size:18px}
+  }
+  /* Маленький телефон */
+  @media (max-width:360px){
+    .card{padding:18px 14px}
+    h1{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="brand">Бухта Сладостей · BAYSWEETS</p>
+  <h1>Спасибо, что вы с нами. Для нас это важно!</h1>
+  <p>Подпишитесь на нашу оптовую рассылку: новинки, поступления и акции на импортные сладости и напитки. Прайс присылаем раз в неделю.</p>
+  <p>Сразу после подписки придёт письмо. Нажмите в нём «Подтвердить». Не нашли письмо? Загляните в «Спам» или «Промоакции».</p>
+
+  <!-- Maliver Subscription Form -->
+  <form action="https://cp.maliver.ru/email/subscribe" method="post" target="_blank">
+    <input type="hidden" name="_form" value="subscribe" />
+    <input type="hidden" name="mailing" value="iBR2" />
+
+    <div>
+      <label for="mal-sub-field-email">E-mail *</label>
+      <input id="mal-sub-field-email" type="text" name="email" value="" inputmode="email" autocomplete="email" required />
+    </div>
+
+    <div style="left:-10000px;position:absolute;">
+      <input type="text" name="subscribe_xQuQ_iBR2" value="" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div>
+      <label for="mal-sub-field-field1">Имя</label>
+      <input id="mal-sub-field-field1" type="text" name="field1" value="" autocomplete="given-name" />
+    </div>
+
+    <div>
+      <label for="mal-sub-field-field2">Фамилия</label>
+      <input id="mal-sub-field-field2" type="text" name="field2" value="" autocomplete="family-name" />
+    </div>
+
+    <label class="agree"><input type="checkbox" required> <span>Я согласен получать рассылку и на обработку моего e-mail. Отписаться можно по ссылке в любом письме.</span></label>
+
+    <input type="submit" value="Подписаться" />
+  </form>
+  <!-- /Maliver Subscription Form -->
+</div>
+</body>
+</html>
